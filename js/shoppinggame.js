@@ -1,8 +1,13 @@
 let gameComplete = false;
-// Define the three constants here
+const name="unknown";
+const score=0;
+const items=0;
 
-// Define the player object here
-
+let player={
+  name,
+  score,
+  items,
+}
 // Define the Product class - write the Constructor function for Product class here
 
 // Complete the dateDiff function
@@ -252,7 +257,7 @@ function init(data) {
                 } else {
                     let iCount = ++player.items;
                     // Make the Object.defineProperty() call here to set the value of items using the value of iCount
-                    
+
                     if (player.items < 10) {
                         shop(prodList, totalBill);
                     } else {
@@ -282,9 +287,9 @@ function init(data) {
                 rateAndExit();
             } else {
                 // Call rating setter method of playerRating to set user entered rate value here
-                
+
                 // Call Object.assign() method here to populate target
-                
+
                 console.log(`${target.name} you rated this game as ${target.rate}`.green);
                 console.log("Thank you for your valuable feedback.".blue);
                 rl.close();
@@ -301,7 +306,7 @@ function init(data) {
 
     // Complete this function
     const exitWon = () => {
-        let finalStatus; 
+        let finalStatus;
         console.log(`Congratulations!!! You became ${finalStatus}!`.blue);
         rateAndExit();
     };
@@ -369,6 +374,3 @@ function init(data) {
     exports.exitLost = exitLost;
     exports.exitWon = exitWon;
     exports.main = main;
-
-
-
