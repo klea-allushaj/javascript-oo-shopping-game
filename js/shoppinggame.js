@@ -302,6 +302,11 @@ function init(data) {
 
         rl.question("What's your name? ", function (name) {
             // Assign the player object's name property to the user entered name here
+            rl.question("What's your name? ", function (name) {
+        player.name = name;
+        console.log(`Welcome ${player.name} !!!`.blue);
+        start(data);
+    });
             console.log(`Welcome ${player.name} !!!`.blue);
             start(data);
         });
